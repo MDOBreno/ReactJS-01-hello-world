@@ -8,19 +8,34 @@
 
 <body>
     <h1>Hello World</h1>
-    <div id="app"></div>
+    <div id="apph1"></div>
+    <div id="apph2"></div>
     <div id="divvv"></div>
+    <div id="app2"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
 
     <script>
         //console.log(React)
-        var h1 = React.createElement('h1', null, 'Hello h1 React');
-        ReactDOM.render(h1, document.getElementById("app"))
+        var h1 = React.createElement('h1', null, 'Hello h1 React');     // Criando elemento com React.createElement("h1",...
+        ReactDOM.render(h1, document.getElementById("apph1"));
         console.log(h1);
+
+        var h2 = React.DOM.h2(null, 'Hello h2 React');                  // Criando elemento com React.DOM.h2(...
+        ReactDOM.render(h2, document.getElementById("apph2"));
+        console.log(h2);
+
         var divvv = React.createElement('div', null, 'Hello Div React');
-        ReactDOM.render(divvv, document.getElementById("divvv"))
-        console.log(h1);
+        ReactDOM.render(divvv, document.getElementById("divvv"));
+        console.log(divvv);
+
+        var app2 = React.DOM.h1(null, [
+            React.DOM.span(null, 'Texto do span, '),
+            React.DOM.span(null, 'Texto do span 2 aninhado, '),
+            React.DOM.i(null, 'Italico')
+            ]);
+        ReactDOM.render(app2, document.getElementById("app2"));
+        console.log(app2);
     </script>
 </body>
 
